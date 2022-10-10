@@ -22,7 +22,7 @@ const initFunc = () => {
         qrInputElement.innerHTML =
             `<a href="${qUrl}" target="_blank">送金先
             ${qUrl.indexOf("paypay") !== -1 ? "(PayPay)" : ""}
-            </a><div id="qrcode"></div>`;
+            </a><div id="qrcode"></div><p>返すかわからん</p>`;
         const qrcode = new QRCode(document.getElementById("qrcode"), {
             text: qUrl,
             width: 300,
