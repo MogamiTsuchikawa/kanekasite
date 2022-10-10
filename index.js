@@ -1,9 +1,9 @@
 const onClick = () => {
     const inputElement = document.getElementById("urlInput");
-    if (inputElement.textContent === "") {
+    if (inputElement.value === "") {
         alert("空のURLは指定できません");
     } else {
-        window.location.href = `https://kaneka.site/?url=${inputElement.textContent}`;
+        window.location.href = `https://kaneka.site/?url=${inputElement.value}`;
     }
 }
 const getParam = (name, url) => {
