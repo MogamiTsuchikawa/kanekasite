@@ -1,15 +1,18 @@
-body{
+body {
     text-align: center;
     position: relative;
-    height: 100vh;
+    height: 97vh;
+    background: white;
 }
-#main{
+
+#main {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
     -webkit-transform: translateY(-50%) translateX(-50%);
 }
-h1{
+
+h1 {
     font-size: 50px;
 }
