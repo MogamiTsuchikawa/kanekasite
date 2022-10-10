@@ -19,8 +19,18 @@ const initFunc = () => {
     const qUrl = getParam("url", window.location.href);
     if (qUrl !== null) {
         const qrInputElement = document.getElementById("qrInputArea");
-        qrInputElement.innerHTML = `<a href="${qUrl}" target="_blank">送金先</a>`;
-
+        qrInputElement.innerHTML =
+            `<a href="${qUrl}" target="_blank">送金先
+            ${qUrl.indexOf("paypay") !== -1 ? "(PayPay)" : ""}
+            </a><div id="qrcode"></div>`;
+        const qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: qUrl,
+            width: 300,
+            height: 300,
+            colorDark : "#ffffff",
+            colorLight : "#000000",
+            correctLevel : QRCode.CorrectLevel.H
+        });
     }
 }
 
